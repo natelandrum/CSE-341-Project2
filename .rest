@@ -1,0 +1,72 @@
+// localhost:8080/song
+### GET all users
+GET http://localhost:8080/song
+
+### GET user by id
+GET http://localhost:8080/song/650c5812c06bc031e32200a1
+
+### POST new user
+
+POST http://localhost:8080/song HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "jonny.doe@email.com",
+    "favoriteColor": "blue",
+    "birthday": "1990-01-01"
+}
+
+### PUT update user
+
+PUT http://localhost:8080/song/650c5812c06bc031e32200a2 HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Sarah",
+    "lastName": "Birch",
+    "email": "test@gmail.com",
+    "favoriteColor": "green",
+    "birthday": "12/12/20"
+}
+
+### DELETE user by ID
+DELETE http://localhost:8080/song/662ff99ae9db25660d284818 HTTP/1.1
+
+
+// localhost:8080/user
+### GET all users
+GET http://localhost:8080/user
+
+### GET user by id
+GET http://localhost:8080/user/650c5812c06bc031e32200a1
+
+### POST new user
+
+POST http://localhost:8080/user HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "jonny.doe@email.com",
+    "favoriteColor": "blue",
+    "birthday": "1990-01-01"
+}
+
+### PUT update user
+
+PUT http://localhost:8080/user/650c5812c06bc031e32200a2 HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Sarah",
+    "lastName": "Birch",
+    "email": "test@gmail.com",
+    "favoriteColor": "green",
+    "birthday": "12/12/20"
+}
+
+### DELETE user by ID
+DELETE http://localhost:8080/user/662ff99ae9db25660d284818 HTTP/1.1
