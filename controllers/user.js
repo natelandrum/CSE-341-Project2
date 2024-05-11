@@ -28,6 +28,10 @@ const getUser = async (req, res) => {
       res.status(400).json({ message: err });
     }
   }).then((users) => {
+    if (users.length === 0) {
+      res.status(404).json({ message: "User not found" });
+      return;
+    }
     res.setHeader("Content-Type", "application/json");
     res.status(200).json(users[0]);
   });

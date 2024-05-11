@@ -28,6 +28,10 @@ const getSong = async (req, res) => {
       res.status(400).json({ message: err });
     }
   }).then((songs) => {
+    if (songs.length === 0) {
+      res.status(404).json({ message: "Song not found" });
+      return;
+    }
     res.setHeader("Content-Type", "application/json");
     res.status(200).json(songs[0]);
   });
