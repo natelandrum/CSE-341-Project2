@@ -5,8 +5,8 @@ const doc = {
     title: "Favorite Song API",
     description: "API to manage favorite songs",
   },
-  host: "localhost:8080",
-  schemes: ["http"],
+  host: "cse-341-project2-30zs.onrender.com",
+  schemes: ["https"],
 };
 
 const outputFile = "./swagger.json";
