@@ -4,7 +4,7 @@ const saveUser = (req, res, next) => {
     const validationRule = {
         username: "required|string",
         email: "required|email",
-        password: "required|password",
+        password: "required|string|regex:/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,40}$/",
     };
 
     validator(req.body, validationRule, {}, (err, status) => {

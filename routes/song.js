@@ -11,7 +11,7 @@ router.get(
 
 router.get(
   "/:id",
-  controller.getUser,
+  controller.getSong,
   // #swagger.description = "Get a song by ID"
 );
 
