@@ -2,6 +2,7 @@ const router = require("express").Router();
 
 const controller = require("../controllers/user");
 const validation = require("../validation/user");
+const { isAuthenticated } = require("../utils/authenticate");
 
 router.get(
   "/",
@@ -17,6 +18,7 @@ router.get(
 
 router.post(
   "/",
+  isAuthenticated,
   validation.saveUser,
   controller.createUser,
   // #swagger.description = "Create a new user"
@@ -25,6 +27,7 @@ router.post(
 
 router.put(
   "/:id",
+  isAuthenticated,
   validation.saveUser,
   controller.updateUser,
   // #swagger.description = "Update a user by ID"
@@ -33,6 +36,7 @@ router.put(
 
 router.delete(
   "/:id",
+  isAuthenticated,
   controller.deleteUser,
   // #swagger.description = "Delete a user by ID"
   // #swagger.responses[500] = { description: "Failed to Delete User" }

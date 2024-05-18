@@ -39,9 +39,7 @@ const getUser = async (req, res) => {
 
 const createUser = async (req, res) => {
   const user = {
-    username: req.body.username,
-    email: req.body.email,
-    password: req.body.password,
+    name: req.body.name,
   };
 
   const response = await mongodb
@@ -64,9 +62,7 @@ const updateUser = async (req, res) => {
   }
   const userId = ObjectId.createFromHexString(req.params.id);
   const user = {
-    username: req.body.username,
-    email: req.body.email,
-    password: req.body.password,
+    name: req.body.name,
   };
 
   const response = await mongodb
